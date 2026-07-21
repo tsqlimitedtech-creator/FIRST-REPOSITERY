@@ -1,1 +1,1668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DIJA Travels & Tours Ltd. | Hajj & Umrah Specialist</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+  <style>
+    /* LUXURIOUS ISLAMIC BRAND DESIGN SYSTEM: BLACK, GOLD, SKY BLUE & PURE WHITE */
+    :root {
+      --primary-black: #0B0F17;       /* Rich Deep Luxury Black */
+      --secondary-black: #161D2A;     /* Soft Charcoal Dark Card */
+      --sky-blue: #0284C7;          /* Primary Bright Sky Blue */
+      --dark-sky-blue: #0369A1;     /* Deep Sky Blue */
+      --sky-gradient: linear-gradient(135deg, #0284C7 0%, #0369A1 100%);
+      --light-sky-blue: #F0F9FF;    /* Ultra Soft Sky Tint */
+      --primary-gold: #D4AF37;      /* Rich Metallic Gold */
+      --gold-hover: #B8952B;        /* Darker Gold Accent */
+      --gold-gradient: linear-gradient(135deg, #D4AF37 0%, #F3E5AB 50%, #B8952B 100%);
+      --bg-light: #F8FAFC;          /* Clean Crisp Off-White */
+      --text-dark: #0F172A;         /* Slate Charcoal Text */
+      --text-muted: #64748B;        /* Muted Text Color */
+      --white: #FFFFFF;             /* Pure White */
+      --gray-border: #E2E8F0;
+      --radius-sm: 6px;
+      --radius-md: 12px;
+      --radius-lg: 20px;
+      --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 10px 25px rgba(2, 132, 199, 0.12);
+      --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.25);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: var(--text-dark);
+      background-color: var(--bg-light);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, .brand-title {
+      font-family: 'Playfair Display', serif;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* TOP UTILITY BAR */
+    .top-bar {
+      background: var(--primary-black);
+      color: var(--white);
+      font-size: 0.8rem;
+      padding: 10px 0;
+      border-bottom: 2px solid var(--primary-gold);
+    }
+
+    .top-bar-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .contact-info {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .contact-info span {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .badge-accredited {
+      color: var(--primary-gold);
+      font-weight: 600;
+      background: rgba(212, 175, 55, 0.15);
+      padding: 2px 8px;
+      border-radius: var(--radius-sm);
+      border: 1px solid rgba(212, 175, 55, 0.4);
+    }
+
+    .admin-link-btn {
+      background: var(--gold-gradient);
+      color: var(--primary-black);
+      padding: 5px 14px;
+      border-radius: var(--radius-sm);
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    .admin-link-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(212, 175, 55, 0.4);
+    }
+
+    /* NAVBAR & RESPONSIVE HEADER */
+    .navbar {
+      background-color: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(10px);
+      padding: 14px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: var(--shadow-sm);
+      border-bottom: 1px solid var(--gray-border);
+      transition: all 0.3s ease;
+    }
+
+    .nav-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .logo-emblem {
+      font-size: 2.2rem;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
+    }
+
+    .brand-title {
+      color: var(--primary-black);
+      font-size: 1.8rem;
+      font-weight: 700;
+      line-height: 1;
+      letter-spacing: -0.5px;
+    }
+
+    .brand-sub {
+      display: block;
+      color: var(--sky-blue);
+      font-size: 0.65rem;
+      letter-spacing: 1.5px;
+      font-weight: 600;
+    }
+
+    .brand-tag {
+      display: block;
+      color: var(--primary-gold);
+      font-size: 0.55rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .nav-links a {
+      color: var(--text-dark);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      position: relative;
+      padding: 4px 0;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:not(.btn-gold-nav)::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: var(--primary-gold);
+      transition: width 0.3s ease;
+    }
+
+    .nav-links a:not(.btn-gold-nav):hover::after {
+      width: 100%;
+    }
+
+    .nav-links a:hover {
+      color: var(--sky-blue);
+    }
+
+    .btn-gold-nav {
+      background: var(--sky-gradient);
+      color: var(--white) !important;
+      padding: 10px 22px;
+      border-radius: 30px;
+      font-weight: 600 !important;
+      box-shadow: 0 4px 12px rgba(2, 132, 199, 0.25);
+      border: 1px solid var(--primary-gold);
+      transition: all 0.3s ease !important;
+    }
+
+    .btn-gold-nav:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(2, 132, 199, 0.4);
+      background: var(--dark-sky-blue);
+    }
+
+    .mobile-nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.8rem;
+      color: var(--sky-blue);
+      cursor: pointer;
+      padding: 5px;
+    }
+
+    /* HERO SECTION WITH POPPING IMAGE SLIDER EFFECT */
+    .hero-section {
+      position: relative;
+      color: var(--white);
+      padding: 100px 0 120px;
+      overflow: hidden;
+      background-color: var(--primary-black);
+    }
+
+    /* BACKGROUND SLIDER KEYFRAMES WITH POPPING FADE */
+    .hero-bg-slider {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+
+    .slide-item {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      transform: scale(1.08);
+      animation: popOnOffSlide 16s infinite ease-in-out;
+    }
+
+    .slide-item:nth-child(1) {
+      background-image: linear-gradient(rgba(11, 15, 23, 0.75), rgba(3, 105, 161, 0.75)), url('The_Ka\'ba,_Great_Mosque_of_Mecca,_Saudi_Arabia_(4).jpg');
+      animation-delay: 0s;
+    }
+
+    .slide-item:nth-child(2) {
+      background-image: linear-gradient(rgba(11, 15, 23, 0.75), rgba(3, 105, 161, 0.75)), url('site-Prophets-Mosque-Medina-Saudi-Arabia-Mecca.webp');
+      animation-delay: 4s;
+    }
+
+    .slide-item:nth-child(3) {
+      background-image: linear-gradient(rgba(11, 15, 23, 0.75), rgba(3, 105, 161, 0.75)), url('images.jfif');
+      animation-delay: 8s;
+    }
+
+    .slide-item:nth-child(4) {
+      background-image: linear-gradient(rgba(11, 15, 23, 0.75), rgba(3, 105, 161, 0.75)), url('images (1).jfif');
+      animation-delay: 12s;
+    }
+
+    @keyframes popOnOffSlide {
+      0% { opacity: 0; transform: scale(1.08); }
+      5% { opacity: 1; transform: scale(1); }
+      22% { opacity: 1; transform: scale(1.03); }
+      27% { opacity: 0; transform: scale(1.08); }
+      100% { opacity: 0; }
+    }
+
+    /* POPPING WATERMARK LAYER */
+    .hero-watermark {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 500px;
+      height: 500px;
+      background: url('The_Ka\'ba,_Great_Mosque_of_Mecca,_Saudi_Arabia_(4).jpg') center/contain no-repeat;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 1;
+      filter: sepia(100%) hue-rotate(180deg) saturate(300%) brightness(1.2);
+      animation: watermarkPop 6s infinite ease-in-out;
+    }
+
+    @keyframes watermarkPop {
+      0%, 100% {
+        opacity: 0.05;
+        transform: translate(-50%, -50%) scale(0.85);
+      }
+      50% {
+        opacity: 0.22;
+        transform: translate(-50%, -50%) scale(1.08);
+      }
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .bismillah-tag {
+      color: var(--primary-gold);
+      font-size: 1.1rem;
+      letter-spacing: 1px;
+      font-weight: 600;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+
+    .hero-text h1 {
+      font-size: 3.3rem;
+      line-height: 1.15;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    .text-gold {
+      color: var(--primary-gold);
+      text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    }
+
+    .hero-text p {
+      font-size: 1.05rem;
+      color: var(--light-sky-blue);
+      margin-bottom: 30px;
+      max-width: 90%;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn-sky {
+      background: var(--sky-gradient);
+      border: 1px solid var(--primary-gold);
+      color: var(--white);
+      padding: 14px 28px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      transition: all 0.3s ease;
+    }
+
+    .btn-sky:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(2, 132, 199, 0.4);
+    }
+
+    .btn-outline {
+      border: 2px solid var(--primary-gold);
+      color: var(--white);
+      padding: 12px 24px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 500;
+      backdrop-filter: blur(5px);
+      transition: all 0.3s ease;
+    }
+
+    .btn-outline:hover {
+      background: var(--primary-gold);
+      color: var(--primary-black);
+    }
+
+    /* HERO ENQUIRY CARD */
+    .hero-enquiry-card {
+      background: rgba(11, 15, 23, 0.85);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--primary-gold);
+      padding: 30px;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-lg);
+      color: var(--white);
+    }
+
+    .hero-enquiry-card h3 {
+      color: var(--primary-gold);
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .hero-enquiry-card input, .hero-enquiry-card select {
+      width: 100%;
+      padding: 12px 15px;
+      margin-bottom: 15px;
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      border-radius: var(--radius-sm);
+      background-color: rgba(22, 29, 42, 0.9);
+      color: var(--white);
+      font-family: inherit;
+      font-size: 0.9rem;
+      transition: border-color 0.3s ease;
+    }
+
+    .hero-enquiry-card input:focus, .hero-enquiry-card select:focus {
+      outline: none;
+      border-color: var(--sky-blue);
+    }
+
+    .btn-gold-full {
+      width: 100%;
+      background: var(--gold-gradient);
+      color: var(--primary-black);
+      border: none;
+      padding: 14px;
+      font-weight: 700;
+      font-size: 1rem;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(212, 175, 55, 0.3);
+    }
+
+    .btn-gold-full:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 18px rgba(212, 175, 55, 0.5);
+    }
+
+    /* TRUST RIBBON */
+    .trust-ribbon {
+      background: var(--white);
+      border-bottom: 1px solid var(--gray-border);
+      padding: 30px 0;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .trust-flex {
+      display: flex;
+      justify-content: space-around;
+      text-align: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .trust-item {
+      padding: 10px 15px;
+      border-radius: var(--radius-sm);
+      transition: transform 0.3s ease;
+    }
+
+    .trust-item:hover {
+      transform: translateY(-3px);
+    }
+
+    .trust-item span {
+      font-size: 2rem;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    /* SECTIONS */
+    .section-padding {
+      padding: 80px 0;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-header h2 {
+      font-size: 2.3rem;
+      color: var(--primary-black);
+      margin-bottom: 10px;
+    }
+
+    .section-header p {
+      color: var(--text-muted);
+      font-size: 1rem;
+    }
+
+    .gold-divider {
+      color: var(--primary-gold);
+      font-size: 1.2rem;
+      margin-top: 5px;
+    }
+
+    /* COMPANY HISTORY & CEO SECTION */
+    .about-section {
+      background: var(--white);
+      border-bottom: 1px solid var(--gray-border);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: stretch;
+    }
+
+    .about-box {
+      background: var(--light-sky-blue);
+      border-left: 5px solid var(--sky-blue);
+      padding: 35px;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .about-box h3 {
+      color: var(--dark-sky-blue);
+      margin-bottom: 15px;
+      font-size: 1.6rem;
+    }
+
+    .ceo-card {
+      background: var(--secondary-black);
+      color: var(--white);
+      border: 1px solid var(--primary-gold);
+      padding: 35px;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-md);
+    }
+
+    .ceo-card h3 {
+      color: var(--primary-gold);
+      margin-bottom: 5px;
+    }
+
+    .ceo-title {
+      color: var(--sky-blue);
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin-bottom: 15px;
+      display: block;
+    }
+
+    .ceo-card p {
+      color: var(--light-sky-blue);
+    }
+
+    /* SACRED DESTINATIONS SHOWCASE WITH UPLOADED IMAGES */
+    .showcase-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .showcase-card {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--gray-border);
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .showcase-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--primary-gold);
+    }
+
+    .showcase-img-container {
+      position: relative;
+      height: 230px;
+      overflow: hidden;
+    }
+
+    .showcase-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .showcase-card:hover .showcase-img {
+      transform: scale(1.08);
+    }
+
+    .showcase-body {
+      padding: 22px;
+    }
+
+    .showcase-body h3 {
+      color: var(--primary-black);
+      font-size: 1.25rem;
+      margin-bottom: 8px;
+    }
+
+    .showcase-body p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    /* SERVICES GRID */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+    }
+
+    .service-box {
+      background: var(--white);
+      padding: 30px 25px;
+      border-radius: var(--radius-md);
+      border-top: 4px solid var(--sky-blue);
+      box-shadow: var(--shadow-sm);
+      border-left: 1px solid var(--gray-border);
+      border-right: 1px solid var(--gray-border);
+      border-bottom: 1px solid var(--gray-border);
+      transition: all 0.3s ease;
+    }
+
+    .service-box:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+      border-top-color: var(--primary-gold);
+    }
+
+    .service-box h4 {
+      color: var(--primary-black);
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+
+    .service-box p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    /* PACKAGES GRID */
+    .packages-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .package-card {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid var(--gray-border);
+      box-shadow: var(--shadow-sm);
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    .package-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .package-card.featured {
+      border: 2px solid var(--primary-gold);
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .pkg-badge {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      color: var(--white);
+      padding: 5px 14px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      border-radius: 20px;
+      z-index: 10;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+
+    .pkg-badge.economy { background: var(--sky-blue); }
+    .pkg-badge.standard { background: var(--dark-sky-blue); }
+    .pkg-badge.vip { background: var(--gold-gradient); color: var(--primary-black); }
+
+    .pkg-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .pkg-body {
+      padding: 25px;
+    }
+
+    .price-label {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .price-amount {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--sky-blue);
+      display: block;
+      margin-bottom: 15px;
+    }
+
+    .pkg-features {
+      list-style: none;
+      margin-bottom: 25px;
+      font-size: 0.9rem;
+    }
+
+    .pkg-features li {
+      margin-bottom: 10px;
+      color: var(--text-dark);
+    }
+
+    .btn-card {
+      width: 100%;
+      padding: 12px;
+      border: 2px solid var(--sky-blue);
+      background: transparent;
+      color: var(--sky-blue);
+      font-weight: 600;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn-card.active, .btn-card:hover {
+      background: var(--sky-gradient);
+      border-color: transparent;
+      color: var(--white);
+      box-shadow: 0 4px 12px rgba(2, 132, 199, 0.2);
+    }
+
+    /* STATS BANNER */
+    .stats-banner {
+      background: var(--primary-black);
+      border-top: 2px solid var(--primary-gold);
+      border-bottom: 2px solid var(--primary-gold);
+      color: var(--white);
+      padding: 65px 0;
+      text-align: center;
+      position: relative;
+    }
+
+    .stats-flex {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 25px;
+      flex-wrap: wrap;
+      gap: 25px;
+    }
+
+    .stat-box h2 {
+      font-size: 2.8rem;
+      color: var(--primary-gold);
+      font-weight: 700;
+    }
+
+    .stat-box p {
+      font-size: 0.95rem;
+      color: var(--light-sky-blue);
+    }
+
+    .stats-subtext {
+      background: rgba(212, 175, 55, 0.15);
+      border: 1px solid var(--primary-gold);
+      color: var(--primary-gold);
+      padding: 12px 25px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      display: inline-block;
+      border-radius: 30px;
+      backdrop-filter: blur(5px);
+    }
+
+    /* PAYMENT & BANK ACCOUNTS */
+    .payment-banner {
+      background: var(--white);
+      padding: 80px 0;
+      border-top: 1px solid var(--gray-border);
+    }
+
+    .bank-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .bank-card {
+      background: var(--light-sky-blue);
+      border: 1px solid #BAE6FD;
+      padding: 25px;
+      border-radius: var(--radius-md);
+      text-align: left;
+      transition: all 0.3s ease;
+    }
+
+    .bank-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-sm);
+      border-color: var(--primary-gold);
+    }
+
+    .bank-card h4 {
+      color: var(--dark-sky-blue);
+      margin-bottom: 12px;
+      font-size: 1.1rem;
+    }
+
+    .bank-card p {
+      font-size: 0.9rem;
+      color: var(--text-dark);
+      margin-bottom: 4px;
+    }
+
+    .payment-methods-row {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+
+    .pay-method {
+      background: var(--bg-light);
+      border: 1px solid var(--primary-gold);
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 0.88rem;
+      color: var(--primary-black);
+    }
+
+    /* ACCREDITATIONS GRID */
+    .cert-grid {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .cert-card {
+      background: var(--white);
+      border: 1px solid var(--gray-border);
+      padding: 20px 30px;
+      border-radius: var(--radius-md);
+      font-size: 0.88rem;
+      box-shadow: var(--shadow-sm);
+      text-align: center;
+    }
+
+    /* ADMIN DASHBOARD MODAL */
+    .admin-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(11, 15, 23, 0.85);
+      backdrop-filter: blur(5px);
+      z-index: 3000;
+      overflow-y: auto;
+      padding: 40px 15px;
+    }
+
+    .admin-content {
+      background: var(--white);
+      max-width: 950px;
+      margin: 0 auto;
+      border-radius: var(--radius-md);
+      padding: 35px;
+      border: 2px solid var(--primary-gold);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .admin-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid var(--sky-blue);
+      padding-bottom: 15px;
+      margin-bottom: 25px;
+    }
+
+    .admin-header h2 {
+      color: var(--primary-black);
+    }
+
+    .close-admin {
+      background: #ef4444;
+      color: var(--white);
+      border: none;
+      padding: 8px 16px;
+      border-radius: var(--radius-sm);
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .close-admin:hover {
+      background: #dc2626;
+    }
+
+    .admin-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 25px;
+    }
+
+    .admin-card {
+      background: var(--bg-light);
+      padding: 20px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--gray-border);
+    }
+
+    .admin-card h4 {
+      color: var(--sky-blue);
+      margin-bottom: 10px;
+    }
+
+    .admin-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+      font-size: 0.85rem;
+    }
+
+    .admin-table th, .admin-table td {
+      border: 1px solid var(--gray-border);
+      padding: 10px;
+      text-align: left;
+    }
+
+    .admin-table th {
+      background-color: var(--primary-black);
+      color: var(--primary-gold);
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--primary-black);
+      color: var(--white);
+      padding: 70px 0 25px;
+      font-size: 0.9rem;
+      border-top: 4px solid var(--primary-gold);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+      gap: 40px;
+      margin-bottom: 50px;
+    }
+
+    .footer-col h3, .footer-col h4 {
+      color: var(--primary-gold);
+      margin-bottom: 20px;
+      font-size: 1.2rem;
+      position: relative;
+      padding-bottom: 8px;
+    }
+
+    .footer-col h3::after, .footer-col h4::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 30px;
+      height: 2px;
+      background: var(--sky-blue);
+    }
+
+    .footer-col p {
+      color: #94A3B8;
+      line-height: 1.7;
+      margin-bottom: 15px;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+
+    .footer-links a {
+      color: #94A3B8;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--primary-gold);
+      padding-left: 5px;
+    }
+
+    .footer-contact-item {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 12px;
+      color: #94A3B8;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 25px;
+      color: #64748B;
+      font-size: 0.85rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    /* FLOATING WHATSAPP BUTTON */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: #25D366;
+      color: var(--white);
+      padding: 12px 20px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.85rem;
+      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+      z-index: 2000;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .whatsapp-float:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+    }
+
+    /* MOBILE & DESKTOP RESPONSIVE BREAKPOINTS */
+    @media (max-width: 992px) {
+      .hero-grid, .about-grid, .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .mobile-nav-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: var(--white);
+        padding: 25px;
+        box-shadow: var(--shadow-md);
+        border-top: 1px solid var(--gray-border);
+        gap: 15px;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .hero-text h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero-text p {
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .top-bar-flex, .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .contact-info {
+        justify-content: center;
+      }
+
+      .hero-text h1 {
+        font-size: 2rem;
+      }
+
+      .stats-flex {
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP UTILITY BAR -->
+  <div class="top-bar">
+    <div class="container top-bar-flex">
+      <div class="contact-info">
+        <span>📞 +234 803 716 5500 / +234 806 123 4567</span>
+        <span>📧 info@dijatravels.com</span>
+        <span class="badge-accredited">IATA Code: 59214481 | NAHCON Licensed</span>
+      </div>
+      <div class="top-bar-right">
+        <a class="admin-link-btn" onclick="toggleAdminModal()">🔑 Staff Portal</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION NAVBAR -->
+  <header class="navbar">
+    <div class="container nav-flex">
+      <a href="#home" class="brand-logo">
+        <div class="logo-emblem">🕋</div>
+        <div class="logo-text">
+          <span class="brand-title">DIJA</span>
+          <span class="brand-sub">TRAVELS & TOURS LTD.</span>
+          <span class="brand-tag">HAJJ & UMRAH SPECIALIST • RC: 616768</span>
+        </div>
+      </a>
+
+      <button class="mobile-nav-toggle" id="mobileMenuBtn" onclick="toggleMobileMenu()" aria-label="Toggle Navigation">☰</button>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#about">Company History</a>
+        <a href="#destinations">Holy Sites</a>
+        <a href="#services">Services</a>
+        <a href="#packages">Packages</a>
+        <a href="#payment">Bank Details</a>
+        <a href="#contact" class="btn-gold-nav">Book Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO SECTION WITH POPPING IMAGE SLIDER -->
+  <section id="home" class="hero-section">
+    <!-- BACKGROUND DYNAMIC SLIDER WITH YOUR IMAGES -->
+    <div class="hero-bg-slider">
+      <div class="slide-item"></div>
+      <div class="slide-item"></div>
+      <div class="slide-item"></div>
+      <div class="slide-item"></div>
+    </div>
+
+    <!-- POPPING WATERMARK LAYER -->
+    <div class="hero-watermark"></div>
+
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <span class="bismillah-tag">﷽ — Bismillah Ar-Rahman Ar-Rahim</span>
+        <h1>Blessed Journeys,<br><span class="text-gold">Lifetime Memories</span></h1>
+        <p>Your trusted partner in global travel solutions and sacred pilgrimages since 2005. We make your Hajj & Umrah journey spiritual, comfortable, and memorable with 5-star Haram-view hotel stays and guided scholar support.</p>
+        <div class="hero-actions">
+          <a href="#packages" class="btn-sky">Explore Packages</a>
+          <a href="#destinations" class="btn-outline">🕋 View Sacred Sites</a>
+        </div>
+      </div>
+
+      <!-- Hero Enquiry Card -->
+      <div class="hero-enquiry-card">
+        <h3>Enquire Now</h3>
+        <form id="heroEnquiryForm">
+          <input type="text" placeholder="Full Name (As in Passport)" required>
+          <input type="email" placeholder="Email Address" required>
+          <input type="tel" placeholder="Phone Number (WhatsApp)" required>
+          <select id="heroSelectPackage">
+            <option value="">Select Package</option>
+            <option value="economy">Economy Package (₦1,250,000)</option>
+            <option value="standard">Standard Package (₦1,850,000)</option>
+            <option value="vip">VIP Package (₦2,850,000)</option>
+            <option value="custom">Custom Corporate / Private Charter</option>
+          </select>
+          <button type="submit" class="btn-gold-full">Send Enquiry</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST BADGES RIBBON -->
+  <div class="trust-ribbon">
+    <div class="container trust-flex">
+      <div class="trust-item"><span>👳‍♂️</span> <strong>Expert Guidance</strong><br><small>24/7 Scholar Support</small></div>
+      <div class="trust-item"><span>🏷️</span> <strong>Best Price</strong><br><small>Guarantee</small></div>
+      <div class="trust-item"><span>⭐</span> <strong>5-Star Luxury</strong><br><small>Haram View Hotels</small></div>
+      <div class="trust-item"><span>🚌</span> <strong>Safe & Comfortable</strong><br><small>VIP Ground Transport</small></div>
+      <div class="trust-item"><span>👥</span> <strong>Trusted by</strong><br><small>50,000+ Pilgrims</small></div>
+    </div>
+  </div>
+
+  <!-- COMPANY HISTORY & CEO PROFILE SECTION -->
+  <section id="about" class="section-padding about-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>About DIJA Travels & Tours Ltd.</h2>
+        <p>Over Two Decades of Excellence in Hajj, Umrah & Corporate Travel Services</p>
+        <div class="gold-divider">♦</div>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-box">
+          <h3>Brief History & Incorporation</h3>
+          <p><strong>DIJA Travels & Tours Ltd.</strong> was officially incorporated under the Corporate Affairs Commission (CAC) of Nigeria in <strong>2005</strong> with Registration Number <strong>RC: 616768</strong>.</p>
+          <br>
+          <p>Founded as a premier full-service travel agency, DIJA Travels has grown into one of Nigeria's most respected names in Hajj and Umrah pilgrimage facilitation, private jet charters, medical tourism, and corporate travel. Accredited by <strong>IATA (Code: 59214481)</strong> and fully licensed by <strong>NAHCON</strong>, the agency has safely served over 50,000 pilgrims and hundreds of corporate clients across Nigeria and international destinations.</p>
+        </div>
+
+        <div class="ceo-card">
+          <h3>Executive Leadership Profile</h3>
+          <span class="ceo-title">Hajiya Amina Ibrahim Yusuf — Managing Director / CEO</span>
+          <p>Under the vision and leadership of <strong>Hajiya Amina Ibrahim Yusuf</strong>, DIJA Travels & Tours Ltd. has maintained an unblemished record of integrity, pilgrim welfare, and premium service delivery.</p>
+          <br>
+          <p>With extensive expertise in international travel management and Saudi Arabian pilgrim logistics, Hajiya Amina continues to champion seamless, spiritual, and comfortable travel experiences for every pilgrim and corporate client.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SACRED DESTINATIONS SHOWCASE WITH UPLOADED IMAGES -->
+  <section id="destinations" class="section-padding bg-light">
+    <div class="container">
+      <div class="section-header">
+        <h2>Sacred Destinations & Luxury Stays</h2>
+        <p>Experience the Holy Mosques in spiritual peace and uncompromised comfort</p>
+        <div class="gold-divider">♦</div>
+      </div>
+
+      <div class="showcase-grid">
+        <!-- Image 1: The Ka'ba Great Mosque of Mecca -->
+        <div class="showcase-card">
+          <div class="showcase-img-container">
+            <img src="The_Ka'ba,_Great_Mosque_of_Mecca,_Saudi_Arabia_(4).jpg" alt="Al-Masjid al-Haram Kaaba Makkah" class="showcase-img">
+          </div>
+          <div class="showcase-body">
+            <h3>The Holy Kaaba (Makkah)</h3>
+            <p>Perform Tawaf around the Holy Kaaba with easy access from luxury 5-star hotels located directly on the Haram courtyard.</p>
+          </div>
+        </div>
+
+        <!-- Image 2: Prophet's Mosque Medina -->
+        <div class="showcase-card">
+          <div class="showcase-img-container">
+            <img src="site-Prophets-Mosque-Medina-Saudi-Arabia-Mecca.webp" alt="Al-Masjid an-Nabawi Madinah" class="showcase-img">
+          </div>
+          <div class="showcase-body">
+            <h3>Al-Masjid an-Nabawi (Madinah)</h3>
+            <p>Pay respects at the Prophet's Mosque and the Green Dome with peaceful, guided visits organized seamlessly for you.</p>
+          </div>
+        </div>
+
+        <!-- Image 3: Great Mosque Mecca Aerial View -->
+        <div class="showcase-card">
+          <div class="showcase-img-container">
+            <img src="images.jfif" alt="Al-Masjid al-Haram Aerial View" class="showcase-img">
+          </div>
+          <div class="showcase-body">
+            <h3>Al-Masjid al-Haram Expansion</h3>
+            <p>Experience the magnificent architecture and serene courtyard surrounding the sacred sites during peak Hajj & Umrah seasons.</p>
+          </div>
+        </div>
+
+        <!-- Image 4: Prophet's Mosque Courtyard & Minarets -->
+        <div class="showcase-card">
+          <div class="showcase-img-container">
+            <img src="images (1).jfif" alt="Madinah Minarets and Evening Courtyard" class="showcase-img">
+          </div>
+          <div class="showcase-body">
+            <h3>Madinah Evening Courtyard</h3>
+            <p>Soak in the spiritual atmosphere under illuminated minarets and umbrella domes in the heart of Madinah.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPREHENSIVE SERVICES SECTION -->
+  <section id="services" class="section-padding">
+    <div class="container">
+      <div class="section-header">
+        <h2>Our End-to-End Travel Services</h2>
+        <p>Providing seamless, reliable, and corporate travel solutions under one roof</p>
+        <div class="gold-divider">♦</div>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-box">
+          <h4>✈️ Air Ticketing</h4>
+          <p>Domestic and international flight reservations with competitive fares and flexible options.</p>
+        </div>
+        <div class="service-box">
+          <h4>🏨 Hotel Accommodations</h4>
+          <p>Worldwide hotel bookings tailored to every preference and budget.</p>
+        </div>
+        <div class="service-box">
+          <h4>🕋 Hajj & Umrah Services</h4>
+          <p>Complete pilgrimage packages including visa, VIP ground transport, catering, and guidance.</p>
+        </div>
+        <div class="service-box">
+          <h4>📑 Visa & Immigration Support</h4>
+          <p>Professional visa advisory and application guidance for global destinations.</p>
+        </div>
+        <div class="service-box">
+          <h4>🛩️ Aircraft Charter Services</h4>
+          <p>Private jet and group charter flight solutions for VIPs, executives, and special delegations.</p>
+        </div>
+        <div class="service-box">
+          <h4>🍲 Bulk Food Catering</h4>
+          <p>Hygienically prepared catering services for pilgrims, corporate gatherings, and large groups.</p>
+        </div>
+        <div class="service-box">
+          <h4>🏥 Medical Tourism</h4>
+          <p>Facilitating access to internationally accredited medical specialists and hospitals worldwide.</p>
+        </div>
+        <div class="service-box">
+          <h4>📦 Air Cargo & Logistics</h4>
+          <p>Reliable domestic and international air freight handling for businesses and individuals.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- POPULAR PACKAGES SECTION -->
+  <section id="packages" class="section-padding bg-light">
+    <div class="container">
+      <div class="section-header">
+        <h2>Our Featured Pilgrimage Packages</h2>
+        <p>Thoughtfully curated packages designed for comfort and spiritual focus</p>
+        <div class="gold-divider">♦</div>
+      </div>
+
+      <div class="packages-grid">
+        <div class="package-card">
+          <span class="pkg-badge economy">ECONOMY</span>
+          <img src="images.jfif" alt="Kaaba Economy Package" class="pkg-img">
+          <div class="pkg-body">
+            <h3>Economy Package</h3>
+            <p class="price-label">From <span class="price-amount">₦1,250,000</span></p>
+            <ul class="pkg-features">
+              <li>✓ Hotel 3 Star Accommodation</li>
+              <li>✓ Shared Air-Conditioned Transport</li>
+              <li>✓ Group Ziyarah Tours</li>
+              <li>✓ Complete Visa Processing & Flight</li>
+            </ul>
+            <button class="btn-card" onclick="bookPackage('Economy Package')">Select Package</button>
+          </div>
+        </div>
+
+        <div class="package-card featured">
+          <span class="pkg-badge standard">STANDARD</span>
+          <img src="site-Prophets-Mosque-Medina-Saudi-Arabia-Mecca.webp" alt="Madinah Standard Package" class="pkg-img">
+          <div class="pkg-body">
+            <h3>Standard Package</h3>
+            <p class="price-label">From <span class="price-amount">₦1,850,000</span></p>
+            <ul class="pkg-features">
+              <li>✓ Hotel 4 Star Near Haram</li>
+              <li>✓ Private VIP Transport</li>
+              <li>✓ Guided Ziyarah with Scholars</li>
+              <li>✓ Buffet Meals & Medical Cover</li>
+            </ul>
+            <button class="btn-card active" onclick="bookPackage('Standard Package')">Select Package</button>
+          </div>
+        </div>
+
+        <div class="package-card">
+          <span class="pkg-badge vip">VIP</span>
+          <img src="The_Ka'ba,_Great_Mosque_of_Mecca,_Saudi_Arabia_(4).jpg" alt="VIP 5 Star Package" class="pkg-img">
+          <div class="pkg-body">
+            <h3>VIP Package</h3>
+            <p class="price-label">From <span class="price-amount">₦2,850,000</span></p>
+            <ul class="pkg-features">
+              <li>✓ Hotel 5 Star Premium Front Row</li>
+              <li>✓ Private Luxury Transport</li>
+              <li>✓ Personal Dedicated Guide</li>
+              <li>✓ Customized Meals & VIP Service</li>
+            </ul>
+            <button class="btn-card" onclick="bookPackage('VIP Package')">Select Package</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS BANNER -->
+  <section class="stats-banner">
+    <div class="container">
+      <div class="stats-flex">
+        <div class="stat-box"><h2>20+</h2><p>Years Experience (Inc. 2005)</p></div>
+        <div class="stat-box"><h2>50,000+</h2><p>Successful Pilgrims</p></div>
+        <div class="stat-box"><h2>500+</h2><p>Corporate Clients</p></div>
+        <div class="stat-box"><h2>24/7</h2><p>Customer Support</p></div>
+      </div>
+      <div class="stats-subtext">Your Journey, Our Commitment • Safe • Comfortable • Memorable</div>
+    </div>
+  </section>
+
+  <!-- PAYMENT & BANKING DETAILS SECTION -->
+  <section id="payment" class="payment-banner">
+    <div class="container text-center">
+      <div class="section-header">
+        <h2>Official Bank Payment Accounts</h2>
+        <p>Please make direct deposits or electronic bank transfers to any of our designated corporate bank accounts below:</p>
+        <div class="gold-divider">♦</div>
+      </div>
+
+      <div class="payment-methods-row">
+        <div class="pay-method">🏦 Direct Bank Transfer</div>
+        <div class="pay-method">💳 Debit / Credit Card</div>
+        <div class="pay-method">⚡ Paystack Instant</div>
+        <div class="pay-method">🦋 Flutterwave</div>
+        <div class="pay-method">📅 Installment Plan</div>
+      </div>
+
+      <div class="bank-grid">
+        <div class="bank-card">
+          <h4>🏦 Jaiz Bank Plc</h4>
+          <p><strong>Account Name:</strong> DIJA Travels & Tours Ltd.</p>
+          <p><strong>Account Number:</strong> 0001234567</p>
+          <p><strong>Branch:</strong> Area 11 Garki, Abuja</p>
+        </div>
+
+        <div class="bank-card">
+          <h4>🏦 TAJBank Limited</h4>
+          <p><strong>Account Name:</strong> DIJA Travels & Tours Ltd.</p>
+          <p><strong>Account Number:</strong> 0009876543</p>
+          <p><strong>Branch:</strong> Ahmadu Bello Way, Abuja</p>
+        </div>
+
+        <div class="bank-card">
+          <h4>🏦 Zenith Bank Plc</h4>
+          <p><strong>Account Name:</strong> DIJA Travels & Tours Ltd.</p>
+          <p><strong>Account Number:</strong> 1012345678</p>
+          <p><strong>Branch:</strong> Kano Main Branch</p>
+        </div>
+
+        <div class="bank-card">
+          <h4>🏦 First Bank of Nigeria</h4>
+          <p><strong>Account Name:</strong> DIJA Travels & Tours Ltd.</p>
+          <p><strong>Account Number:</strong> 2034567890</p>
+          <p><strong>Branch:</strong> Central Business District, Abuja</p>
+        </div>
+      </div>
+
+      <p style="margin-top: 30px; font-size: 0.85rem; color: var(--text-muted);">
+        <strong>Note:</strong> Always quote your Full Name or Passport Number as the transaction reference when making transfers.
+      </p>
+    </div>
+  </section>
+
+  <!-- ACCREDITATIONS & LICENSES -->
+  <section id="accreditations" class="section-padding bg-light">
+    <div class="container text-center">
+      <div class="section-header">
+        <h2>Statutory Certifications & Accreditations</h2>
+        <p>Duly registered and licensed by Federal Republic of Nigeria & International Bodies</p>
+      </div>
+      <div class="cert-grid">
+        <div class="cert-card"><strong>CAC INCORPORATED</strong><br><small>RC No: 616768 (Inc. 2005)</small></div>
+        <div class="cert-card"><strong>NAHCON HAJJ LICENSE</strong><br><small>License: LHS/000273</small></div>
+        <div class="cert-card"><strong>NAHCON UMRAH LICENSE</strong><br><small>License: LUS/000461</small></div>
+        <div class="cert-card"><strong>IATA ACCREDITED</strong><br><small>Code: 59214481</small></div>
+        <div class="cert-card"><strong>NCAA REGISTERED</strong><br><small>NCAA/ATR/TAC.423</small></div>
+        <div class="cert-card"><strong>AHUON MEMBER</strong><br><small>CAC/IT/NO 24067 ABZ</small></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ADMIN PORTAL MODAL -->
+  <div id="adminModal" class="admin-modal">
+    <div class="admin-content">
+      <div class="admin-header">
+        <h2>DIJA Travels Admin Control Panel</h2>
+        <button class="close-admin" onclick="toggleAdminModal()">✕ Close Panel</button>
+      </div>
+
+      <div class="admin-grid">
+        <div class="admin-card">
+          <h4>Executive Leadership Profile</h4>
+          <p><strong>Managing Director / CEO:</strong> Hajiya Amina Ibrahim Yusuf</p>
+          <p><strong>Agency Manager:</strong> Hajiya Halima Yakubu Ndanusa</p>
+          <p><strong>Head of Ticketing:</strong> Yusuf Aliyu Vatsa</p>
+          <p><strong>IT Manager:</strong> Saleh Bala Doma</p>
+        </div>
+        <div class="admin-card">
+          <h4>Licensing & Quotas Overview</h4>
+          <p><strong>CAC RC Number:</strong> 616768 (Incorporated 2005)</p>
+          <p><strong>IATA Code:</strong> 59214481 (GoLite Accredited)</p>
+          <p><strong>NAHCON Hajj License:</strong> LHS/000273</p>
+          <p><strong>NAHCON Umrah License:</strong> LUS/000461</p>
+        </div>
+      </div>
+
+      <h3>Recent Pilgrim Booking Requests</h3>
+      <table class="admin-table">
+        <thead>
+          <tr>
+            <th>Applicant Name</th>
+            <th>Package</th>
+            <th>Payment Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Ibrahim Ahmed</td>
+            <td>VIP Package (₦2,850,000)</td>
+            <td><span style="color:green; font-weight:bold;">Verified (Jaiz Bank)</span></td>
+            <td><button style="padding:4px 8px; cursor:pointer;">Process Visa</button></td>
+          </tr>
+          <tr>
+            <td>Fatima Abubakar</td>
+            <td>Standard Package (₦1,850,000)</td>
+            <td><span style="color:orange; font-weight:bold;">Installment Received</span></td>
+            <td><button style="padding:4px 8px; cursor:pointer;">Send Invoice</button></td>
+          </tr>
+          <tr>
+            <td>Usman Mohammed</td>
+            <td>Economy Package (₦1,250,000)</td>
+            <td><span style="color:blue; font-weight:bold;">Transfer Pending</span></td>
+            <td><button style="padding:4px 8px; cursor:pointer;">Approve Transfer</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>DIJA TRAVELS & TOURS LTD.</h3>
+          <p>Your premier partner in Hajj & Umrah pilgrimage, private charters, and corporate travel services. Serving pilgrims with dedication, trust, and luxury since 2005.</p>
+          <p style="color: var(--primary-gold); font-weight: 600;">RC: 616768 | IATA: 59214481</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">Company History</a></li>
+            <li><a href="#destinations">Sacred Sites</a></li>
+            <li><a href="#services">Our Services</a></li>
+            <li><a href="#packages">Hajj & Umrah Packages</a></li>
+            <li><a href="#payment">Bank Accounts</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Abuja Head Office</h4>
+          <div class="footer-contact-item">
+            <span>📍</span>
+            <span>Suite 203, 2nd Floor, Grace Plaza, Plot 1456, Ahmadu Bello Way, Area 11, Garki, Abuja, FCT, Nigeria.</span>
+          </div>
+          <div class="footer-contact-item">
+            <span>📞</span>
+            <span>+234 803 716 5500</span>
+          </div>
+          <div class="footer-contact-item">
+            <span>📧</span>
+            <span>info@dijatravels.com</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Kano Regional Office</h4>
+          <div class="footer-contact-item">
+            <span>📍</span>
+            <span>No. 12, Sultan Road, Kano State, Nigeria.</span>
+          </div>
+          <div class="footer-contact-item">
+            <span>📞</span>
+            <span>+234 806 123 4567</span>
+          </div>
+          <div class="footer-contact-item">
+            <span>🌐</span>
+            <span>www.dijatravels.com</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 DIJA Travels & Tours Ltd. All rights reserved.</p>
+        <p>Designed with Excellence • Safe • Comfortable • Memorable</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a href="https://wa.me/2348037165500?text=Hello%20DIJA%20Travels,%20I%20would%20like%20to%20enquire%20about%20Hajj/Umrah%20packages." class="whatsapp-float" target="_blank">
+    <span>💬 Chat on WhatsApp</span>
+  </a>
+
+  <script>
+    function toggleMobileMenu() {
+      const navLinks = document.getElementById('navLinks');
+      navLinks.classList.toggle('active');
+    }
+
+    function bookPackage(packageName) {
+      const selectElement = document.getElementById('heroSelectPackage');
+      if (selectElement) {
+        if (packageName.includes('Economy')) selectElement.value = 'economy';
+        if (packageName.includes('Standard')) selectElement.value = 'standard';
+        if (packageName.includes('VIP')) selectElement.value = 'vip';
+      }
+      
+      const homeSection = document.getElementById('home');
+      if (homeSection) {
+        homeSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    function toggleAdminModal() {
+      const modal = document.getElementById('adminModal');
+      if (modal.style.display === 'block') {
+        modal.style.display = 'none';
+      } else {
+        modal.style.display = 'block';
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const enquiryForm = document.getElementById('heroEnquiryForm');
+      
+      if (enquiryForm) {
+        enquiryForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          alert('JazakAllah Khair! Your enquiry for DIJA Travels & Tours Ltd. has been submitted successfully. Our team will contact you shortly.');
+          enquiryForm.reset();
+        });
+      }
+    });
+  </script>
+</body>
+</html>
