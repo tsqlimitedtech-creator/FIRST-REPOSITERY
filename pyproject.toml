@@ -1,0 +1,20 @@
+[project]
+name = "first-repository"
+version = "0.1.0"
+description = "Excel consolidation CLI and FastAPI service for Division-5 reports."
+readme = "README_API.md"
+requires-python = ">=3.12"
+
+[project.dependencies]
+fastapi = "*"
+uvicorn = "*"
+pandas = "*"
+openpyxl = "*"
+streamlit = "*"
+pytest = "*"
+pytest-cov = "*"
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q"
+testpaths = ["."]
