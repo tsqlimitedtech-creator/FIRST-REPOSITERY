@@ -13,7 +13,7 @@ This repository now includes a FastAPI service for processing Division-5 daily r
 ## Run the service
 
 ```bash
-pip install -r requirements.txt
+pip install .
 uvicorn app:app --reload
 ```
 
@@ -51,4 +51,4 @@ python main.py -i input.xlsx -o output.xlsx
 
 - `main.py` contains the core Excel processing logic
 - `app.py` exposes that logic via a web API
-- `requirements.txt` includes all dependencies for both CLI and API usage
+- Dependencies are managed via `pyproject.toml`
